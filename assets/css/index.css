@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    padding: 10px;
+    line-height: 1.5;
+}
+p{
+    padding: 5px;
+}
+.nav{
+    background-color: darkgrey;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+}
+
+.brandName, .menu, .contactIconsContainer{
+    display: inline-block;
+    width: 40%;
+}
+
+.menu, .contactIconsContainer{
+    text-align: right;
+}
+
+ .heroContainer{
+    padding: 10px;
+} 
+
+main{
+    position: absolute;
+    top: 30%;
+    left:0;
+    right:0; 
+
+    text-align: center;
+}
+
+.aboutContainer{
+    background-color: gray;
+    padding: 10px;
+}
+
+.projectsContainer{
+    background-color: darkgray;
+    padding: 10px;
+}
+
