@@ -1,16 +1,48 @@
+/* titles brand name font-family: 'Monda', sans-serif; */
+/* links, titles font-family: 'Julius Sans One', sans-serif; */
+/* pragraph ont-family: 'Open Sans', sans-serif; */
+
+/* blue rgb(0,95,161) */
+/* dark gray rgb(87,87,87) */
+/* light gray rgb(176,176,176) */
+/* super light gray f2f2f2 */
+/* almost black #0C1A27 */
+
+
 *{
     box-sizing: border-box;
     padding: 10px;
-    line-height: 1.5;
+    line-height: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 }
+
+.brandName{
+    font-family: Monda;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(0,95,161);
+}
+
+a{
+    text-decoration: none;
+}
+
 p{
     padding: 5px;
 }
-.nav{
-    background-color: darkgrey;
+
+header{
+    height: 150px;
+}
+
+nav{
+    z-index: 1;
     padding: 10px;
     position: fixed;
     width: 100%;
+    background-color: white;
+    border-bottom: 1px solid rgb(87,87,87);
 }
 
 .brandName, .menu, .contactIconsContainer{
@@ -27,13 +59,21 @@ p{
 } 
 
 main{
-    position: absolute;
+    /* position: absolute;
     top: 30%;
     left:0;
-    right:0; 
-
+    right:0;  */
     text-align: center;
 }
+
+h1{
+    font-size: 30px;
+}
+
+h2, h3, h3 {
+    font-size: 18px;
+}
+
 
 .aboutContainer{
     background-color: gray;
