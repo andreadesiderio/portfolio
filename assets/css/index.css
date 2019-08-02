@@ -94,5 +94,6 @@ footer{
         }
         .contactList{
             transform: translate3d(0px, 260px, 0px) !important; 
+        }
         
     }
