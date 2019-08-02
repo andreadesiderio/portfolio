@@ -92,5 +92,7 @@ footer{
         .heroContainer{
             padding: 100px 0 15px 0;
         }
+        .contactList{
+            transform: translate3d(0px, 260px, 0px) !important; 
         
     }
