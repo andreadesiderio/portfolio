@@ -4,40 +4,35 @@
     line-height: 1.5em;
 }
 
-header{
-    height: 60px;
-    
+.dropdown-menu, .navbar-toggler{
+    border: none;
 }
 
-
-nav{
-    background-color: darkgrey;
-    padding: 10px;
-    width: 100%;
-    z-index: 1;
-    position: fixed;
-}
-
-.brandName, .menu, .contactIconsContainer{
-    display: inline-block;
-    width: 40%;
-}
-
-.menu, .contactIconsContainer{
-    text-align: right;
-}
-
- .heroContainer{
-    padding: 10px;
-} 
-
-p{
-    padding: 5px;
-}
 
 main{
     text-align: center;
 }
+
+.heroContainer{
+    padding: 60px 0 10px 0;
+}
+
+ul{
+    justify-content: space-around;
+}
+
+.contactList{
+height: 50px;
+width: 100%;
+position: absolute;
+transform: translate3d(0px, 160px, 0px);
+top: 0px;
+left: 0;
+right: 0;
+will-change: transform;
+margin: auto;
+}
+
 
 .aboutContainer{
     background-color: gray;
@@ -49,8 +44,54 @@ main{
     padding: 10px;
 }
 
-footer{
-    background-color: darkgrey;
-    padding: 10px; 
-    width: 100%; 
+
+.project{
+    background-color: white;
+    border: 1px solid black;
 }
+.projectDescriptionContainer{
+    padding: 10px;
+}
+
+.projectDescription{
+    text-align: left;
+}
+
+ .gifContainer{    
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgray;
+} 
+
+.gif{
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 10px;
+    background-color: gray;
+}
+
+.contactIconsContainer, footer p{
+    display: inline-block;
+}
+
+footer{
+    min-height: 50px;
+    background-color: darkgrey;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    @media screen and (min-width:700px){
+        .gifContainer{
+            flex-direction: row;
+        }
+        .heroContainer{
+            padding: 100px 0 15px 0;
+        }
+        
+    }
