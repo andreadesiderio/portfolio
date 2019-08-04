@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
     <link href="assets/css/normalise.css" rel="stylesheet">
     <link href="assets/css/index.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
@@ -13,42 +17,84 @@
 </head>
 <body>
     <header>
-        <nav class="nav">
-            <div class="brandName">Andrea Desiderio</div>
-            <div class="menu">UL</div>
-        </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#hero">Andrea Desiderio</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto mt-lg-0 d-flex">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contact
+                          </a>
+                          <!-- d-flex -->
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <div class="d-flex">
+                            <a class="dropdown-item" href="#">icon</a>
+                            <a class="dropdown-item" href="#">icon</a>
+                            <a class="dropdown-item" href="#">icon</a>
+                            <a class="dropdown-item" href="#">icon</a>
+                        </div>
+                        </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </nav>
     </header>
-    <main>
-        <div class="heroContainer">
+    <main class="container">
+        <section class="heroContainer" id="hero">
         <h1>Hi I'm Andrea</h1>
         <p>I am a full stack web developer</p>
+        <button class="dropdown-toggle" data-toggle="dropdown">Contact Me</button>
+        <div class="dropdown-menu dropdown-menu-right contactList">
+            <ul class="d-flex" >
+                <li><a href="#">githubicon</a></li>
+                <li><a href="#">linkedinicon</a></li>
+                <li><a href="#">emailicon</a></li>
+                <li><a href="#">phone?icon</a></li>
+            </ul>
         </div>
+        </section>
 
-        <div class="aboutContainer">
+        <section class="aboutContainer" id="about">
             <h2>About Me</h2>
-            <p>lorem</p>
-        </div>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
+        </section>
 
-        <div class="projectsContainer">
+        <section class="projectsContainer" id="projects">
+            <h2>My Projects</h2>
             <div class="project">
                 <h3>Title</h3>
                   <div class="projectDescriptionContainer">
-                    <p class="icons">tech icons</p>
+                    <p class="icons projectDescription">tech icons</p>
+                    <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                    <p class="projectLinks">GITHUB LINK| DEMO LINK</p>
                   </div>
-                    <p>description</p>
                   <div class="gifContainer">
-                    <div class="gif">gif</div>
-                    <div class="gif">gif</div>
+                    <img class="gif" src="" alt="gif">
+                    <img class="gif" src="" alt="gif">
                 </div>
-                <p class="projectLinks">link|link</p>
             </div>
-        </div>
+        </section>
     </main>
-    <footer class="nav">
-        <div class="brandName">Name</div>
+    <footer>
+        <p>Name</p>
         <div class="contactIconsContainer">
-             icon Icon Icon
+         <a href="#">icon</a> <a href="#">icon</a> <a href="#">icon</a> <a href="#">icon</a>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
 </body>
 </html>
