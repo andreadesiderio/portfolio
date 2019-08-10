@@ -17,54 +17,80 @@
     font-size: 16px;
 }
 
-.brandName{
-    font-family: Monda;
-    font-weight: bold;
-    font-size: 30px;
-    color: rgb(0,95,161);
+.topNav{
+    position: fixed;
+    width: 100%;
+    background-color: #f2f2f2;
+    /* padding: 0 10px; */
+    padding: 14px 20px;
+}
+
+.topNavList{
+    display: none;
 }
 
 a{
     text-decoration: none;
 }
 
-p{
-    padding: 5px;
-}
+.topNav a {
+    color: black;
+    padding: 14px 16px; 
+  }
 
-header{
-    height: 150px;
-}
+.topNav a.brandName{
+    color: rgb(0,95,161);
+  }
 
-/* nav{
-    z-index: 1;
-    padding: 10px;
-    position: fixed;
+.topNav a:hover{
+    background-color: #0C1A27;
+    color:#f2f2f2;
+    cursor: pointer; 
+}
+ 
+.topNav a.active {
+    font-weight: bold;
+  }
+
+.brandNameContainer{
+    /* padding: 14px 16px;   */
+    display: inline-block;
+    font-family: Monda;
+    font-weight: bold;
+    font-size: 20px; 
+  }
+
+.hamburger{
+    position: absolute;
+    top:5px;
+    right: 8%;
+} 
+
+.topNav.responsive .topNavList{
+    flex-direction: column;
     width: 100%;
-    background-color: white;
-    border-bottom: 1px solid rgb(87,87,87);
-} */
+} 
 
-.dropdown-menu, .navbar-toggler{
-    border: none;
+.topNav.responsive .topNavLinks{
+flex-direction: row;
 }
 
+/* .topNav.responsive .navBarLinks, */
+.topNav.responsive a:not(.hamburger), .topNav.responsive ul.topNavList{
+display: block;
+text-align: left;
+width: 100%;
+}
 
 main{
+    padding-top: 48px;
     text-align: center;
 }
 
 .heroContainer{
-    padding: 60px 0 10px 0;
-}
-
-
-main{
-    /* position: absolute;
-    top: 30%;
-    left:0;
-    right:0;  */
-    text-align: center;
+    padding: 80px 0 30px 0; 
+    background-color: #0C1A27;
+    color:#f2f2f2;
 }
 
 h1{
@@ -75,25 +101,48 @@ h2, h3, h3 {
     font-size: 18px;
 }
 
-ul{
+.dropdownToggleButton{
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    background-color: rgb(0,95,161);
+    cursor: pointer;
+    margin-top: 20px;
+}
+.dropdownToggleButton:hover{
+    background-color: black;
+}
+
+/* .dropdown-menu, .navbar-toggler{
+    border: none;
+} */
+
+.dropdownMenu.hidden{
+    display: none;
+}
+
+ul.dropDownList{
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
-}
-
-.contactList{
-height: 50px;
-width: 90%;
-transform: translate3d(0px, 220px, 0px) !important; 
-top: 0px;
-left: 0;
-right: 0;
-will-change: transform;
-margin: auto;
+    margin-top: 20px;
+    padding: 14px 20px;
 }
 
 
+
+.contactLink{
+    color: rgb(176,176,176);
+    font-size: 30px;
+    padding: 14px 20px;
+}
+
+.contactLink:hover{
+color: #f2f2f2;
+background-color: rgba(87, 87, 87, .5);
+}
 
 .aboutContainer{
-    background-color: gray;
     padding: 10px;
 }
 
@@ -115,7 +164,7 @@ margin: auto;
     text-align: left;
 }
 
- .gifContainer{    
+.gifContainer{    
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -131,9 +180,6 @@ margin: auto;
     background-color: gray;
 }
 
-.contactIconsContainer, footer p{
-    display: inline-block;
-}
 
 footer{
     min-height: 50px;
@@ -143,16 +189,51 @@ footer{
     justify-content: space-around;
     align-items: center;
 }
-
-    @media screen and (min-width:700px){
-        .gifContainer{
-            flex-direction: row;
-        }
-        .heroContainer{
-            padding: 100px 0 15px 0;
-        }
-        .contactList{
-            transform: translate3d(0px, 260px, 0px) !important; 
-        }
-        
+  
+@media screen and (min-width:700px){
+    .topNav .hamburger{
+        display: none;
+      }
+    .topNav .navBarLinks, .topNavList{
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-around; 
+        align-items: center;
+    }  
+    .gifContainer{
+        flex-direction: row;
     }
+    .heroContainer{
+        padding: 100px 0 15px 0;
+    } 
+    .topNav a:hover{
+        background-color: #0C1A27;
+        color:#f2f2f2;
+        cursor: pointer; 
+    } 
+    main{
+        padding-top: 0;
+    }
+    .dropdownMenu{
+        padding: 14px 20px; 
+    }
+
+} 
+
+/* minwidth 700px */
+/*700px .navBarLinks{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+   align-items: center;  
+} */
+/*  */
+  /* .topNav a {
+    display: inline-block;  */
+ /* .topNavList{ */
+    /* display: inline-block;  */
+     /* display: flex;
+     flex-direction: row;
+    justify-content: space-around; 
+    width: 40%;
+  }   */
