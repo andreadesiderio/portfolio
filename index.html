@@ -21,13 +21,13 @@
               <div class="brandNameContainer ">
             <a href="#home" class="active topNavLink brandName">Andrea Desiderio</a> 
             </div> 
-            <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+            <a href="javascript:void(0);" class="hamburger">
               <i class="fa fa-bars"></i>
             </a>
               <ul class="topNavList">
-                  <li><a class="topNavLink" href="#about" onclick="myFunction()">About</a></li>
-                  <li><a class="topNavLink" href="#projects" onclick="myFunction()">Projects</a></li>
-                  <li><a class="topNavLink" href="#contact" onclick="myFunction()">Contact</a></li>
+                  <li><a class="topNavLink" href="#about">About</a></li>
+                  <li><a class="topNavLink" href="#projects">Projects</a></li>
+                  <li><a class="topNavLink dropdownToggle" href="#contact">Contact</a></li>
               </ul>
             </div>
           </nav>
@@ -36,66 +36,75 @@
         <section class="heroContainer" id="hero">
         <h1>Hi I'm Andrea</h1>
         <p>I am a full stack web developer</p>
-        <button class="dropdownToggleButton">Contact Me</button>
-        <div class="dropdownMenu">
+        <button class="dropdownToggleButton dropdownToggle" id="contact">Contact Me</button>
+        <div class="dropdownMenu hidden">
             <ul class="dropDownList" >
                 <li><a class="contactLink" href="https://github.com/andreadesiderio"><i class="fab fa-github"></i></a></li>
                 <li><a class="contactLink" href="https://www.linkedin.com/in/andrea-desiderio/"><i class="fab fa-linkedin"></i></a></li>
-                <li><a class="contactLink" href="andreadesideriopro@gmail.com"><i class="fas fa-envelope"></i></a></li>
-                <li><a class="contactLink" href="999-9999"><i class="fas fa-phone"></i></a></li>
+                <li><a class="contactLink" href="mailto:andreadesideriopro@gmail.com?subject=Portfolio &body=message%20goes%20here"><i class="fas fa-envelope"></i></a></li>
             </ul>
         </div>
         </section>
 
         <section class="aboutContainer" id="about">
             <h2>About Me</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
+            <p>   I am a <span class="bold">Full Stack Web Developer</span>, currently attending the Web Developer Program at <span class='bold'>Thinkful</span> through <span class='bold'>Bloc</span>. I am a <span class="bold">lifelong learner</span>, <span class="bold">creator</span> and <span class="bold">problem solver</span>. I strive for practicality, efficiency and optimization.
+              The stack I currently use is <span class='bold'>HTML</span>, <span class='bold'>CSS</span>, <span class="bold">Javascript</span>  and <span class="bold">Jquery</span>.</p>
+              
+              <!-- <p>I've always had a growth mindset and I needed to find a practical way to challenge my mind. Coding and <span class="bold"> Software Development</span> has proven to be the best brain workout. It's a fun process with a satisfying result.</p> -->
         </section>
 
         <section class="projectsContainer" id="projects">
             <h2>My Projects</h2>
             <div class="project">
-                <h3>Title</h3>
+                <h3 class="projectTitle">Dental Quiz</h3>
                   <div class="projectDescriptionContainer">
-                    <p class="icons projectDescription">tech icons</p>
-                    <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-                    <p class="projectLinks">GITHUB LINK| DEMO LINK</p>
+                    <p class="icons projectDescription"><i class="fab fa-html5"></i> <i class="fab fa-css3"></i> <i class="fab fa-js"></i></p>
+                    <p class="projectDescription">This Dental Terminology quiz app is great for training dental assistants to learn basic dental terminology. Or for anyone who wants to know what their dentists are talking about.</p>
+                    <p class="projectLinks"><a href="https://github.com/andreadesiderio/dentalQuizApp"><span class="projectLink">GITHUB</span></a>|<a href="https://andreadesiderio.github.io/dentalQuizApp/"><span class="projectLink">DEMO</span></a></p>
                   </div>
                   <div class="gifContainer">
-                    <img class="gif" src="" alt="gif">
-                    <img class="gif" src="" alt="gif">
+                    <img class="gif" src="assets/img/hero-quiz.gif" alt="gif">
+                    <img class="gif" src="assets/img/feedback-quizStart.gif" alt="gif">
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>Name</p>
-        <div class="contactIconsContainer">
-         <a href="#">icon</a> <a href="#">icon</a> <a href="#">icon</a> <a href="#">icon</a>
+        <div class="footerIconsContainer">
+            <ul>
+                <li><a class="contactLink" href="https://github.com/andreadesiderio"><i class="fab fa-github"></i></a></li>
+                <li><a class="contactLink" href="https://www.linkedin.com/in/andrea-desiderio/"><i class="fab fa-linkedin"></i></a></li>
+                <li><a class="contactLink" href="mailto:andreadesideriopro@gmail.com?subject=Portfolio &body=message%20goes%20here"><i class="fas fa-envelope"></i></a></li>
+            </ul>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <script>
-      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("topNav");
-  if (x.className === "topNav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topNav";
-  }
+
+function handleResposnsiveNav(){
+$('.hamburger').on('click', toggleResponsiveNav);
+}
+
+function toggleResponsiveNav(){
+  $('nav').toggleClass('responsive');
+  $('a.topNavLink').on('click', function(){
+    $('nav').removeClass('responsive');
+  });
 }
 
 
-$('.dropdownToggleButton').on('click', function(){
-  $('.dropdownMenu').style.backgroundColor = 'red';
-  // $('.dropDownMenu').toggleClass('hidden');
-});
+function toggleDropDown(){
+ $('.dropdownToggle').on('click', function(e){
+ $('.dropdownMenu').toggleClass('hidden');
+})
+}
 
-// $('.topNavLink').on('click', $('#topNav').toggleClass('.responsive'))
+handleResposnsiveNav();
+toggleDropDown();
+
 
     </script>  
 </body>
