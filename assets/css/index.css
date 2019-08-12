@@ -21,7 +21,6 @@
     position: fixed;
     width: 100%;
     background-color: #f2f2f2;
-    /* padding: 0 10px; */
     padding: 14px 20px;
 }
 
@@ -33,7 +32,7 @@ a{
     text-decoration: none;
 }
 
-.topNav a {
+.topNav a:not(.brandName) {
     color: black;
     padding: 14px 16px; 
   }
@@ -74,7 +73,6 @@ a{
 flex-direction: row;
 }
 
-/* .topNav.responsive .navBarLinks, */
 .topNav.responsive a:not(.hamburger), .topNav.responsive ul.topNavList{
 display: block;
 text-align: left;
@@ -103,9 +101,11 @@ h2, h3, h3 {
     padding: 14px 20px;
     font-weight: 700;
 }
+
 .bold{
     font-weight: bold;
 }
+
 .dropdownToggleButton{
     font-weight: bold;
     color: white;
@@ -114,6 +114,7 @@ h2, h3, h3 {
     cursor: pointer;
     margin-top: 20px;
 }
+
 .dropdownToggleButton:hover{
     background-color: black;
 }
@@ -137,13 +138,14 @@ ul.dropDownList{
 }
 
 .contactLink:hover{
-color: #f2f2f2;
-background-color: rgba(87, 87, 87, .5);
+    color: #f2f2f2;
+    background-color: rgba(87, 87, 87, .5);
 }
 
 .aboutContainer{
-    padding: 30px 20px; 
-     
+    padding: 50px 20px; 
+    max-width: 920px;
+    margin: auto;  
 }
 
 .aboutContainer p{
@@ -152,7 +154,7 @@ background-color: rgba(87, 87, 87, .5);
 
 .projectsContainer{
     background-color: #0C1A27;
-    padding: 10px;
+    padding: 50px 10px; 
 }
 
 .projectsContainer h2{
@@ -170,16 +172,20 @@ background-color: rgba(87, 87, 87, .5);
 }
 
 .projectDescriptionContainer{
-    padding: 10px;
-} 
+    padding: 14px 20px;
+    max-width: 920px;
+    margin: auto;
+}
 
 .icons{
     font-size: 30px;
     color: rgb(87,87,87);
+    padding: 0;
 }
 
 .projectDescription{
     text-align: left;
+    padding: 0;
 }
 
 .projectLinks{
@@ -211,14 +217,12 @@ background-color: rgba(87, 87, 87, .5);
     flex-grow: 1;
     flex-shrink: 1;
     margin: 10px;
-    background-color: gray;
 }
 
 footer{
     min-height: 50px;
     width: 100%;
     background-color: #f2f2f2; 
-    /* background-color: rgb(87,87,87); */
     padding: 14px 20px; 
 }
 
@@ -253,18 +257,41 @@ footer{
         flex-direction: row;
         justify-content: space-around; 
         align-items: center;
-    }  
-    .heroContainer{
-        padding: 100px 0 15px 0;
-    } 
-    .topNav a:hover{
-        background-color: #0C1A27;
-        color:#f2f2f2;
-        cursor: pointer; 
-    } 
-    main{
-        padding-top: 0;
     }
+
+    .brandNameContainer{
+        font-size: 30px;
+    }
+
+    main{
+        padding: 100px 20px;
+    }
+
+    .aboutContainer{
+        padding: 60px 20px;   
+    }
+    .projectsContainer{
+        padding: 60px 20px;   
+    }
+
+    h1{
+       font-size: 32px;
+   }
+
+   h2{
+       font-size: 25px;
+   } 
+
+   h3{
+       font-size: 20px;
+   } 
+
+   p{
+       font-size: 20px;
+       padding: 14px 20px;
+       line-height: 1.5em;
+    }
+    
     .dropdownMenu{
         padding: 14px 20px; 
     }
