@@ -6,7 +6,7 @@
 /* dark gray rgb(87,87,87) */
 /* light gray rgb(176,176,176) */
 /* super light gray f2f2f2 */
-/* almost black #0C1A27 */
+/* almost black #0C1A27   rgb(12, 26, 39)*/
 
 
 *{
@@ -21,7 +21,6 @@
     position: fixed;
     width: 100%;
     background-color: #f2f2f2;
-    /* padding: 0 10px; */
     padding: 14px 20px;
 }
 
@@ -33,7 +32,7 @@ a{
     text-decoration: none;
 }
 
-.topNav a {
+.topNav a:not(.brandName) {
     color: black;
     padding: 14px 16px; 
   }
@@ -53,7 +52,6 @@ a{
   }
 
 .brandNameContainer{
-    /* padding: 14px 16px;   */
     display: inline-block;
     font-family: Monda;
     font-weight: bold;
@@ -75,7 +73,6 @@ a{
 flex-direction: row;
 }
 
-/* .topNav.responsive .navBarLinks, */
 .topNav.responsive a:not(.hamburger), .topNav.responsive ul.topNavList{
 display: block;
 text-align: left;
@@ -85,20 +82,28 @@ width: 100%;
 main{
     padding-top: 48px;
     text-align: center;
+    margin: auto;
 }
 
 .heroContainer{
-    padding: 80px 0 30px 0; 
+    padding: 50px 0 30px 0; 
     background-color: #0C1A27;
     color:#f2f2f2;
 }
 
 h1{
     font-size: 30px;
+    padding: 14px 20px;
 }
 
 h2, h3, h3 {
     font-size: 18px;
+    padding: 14px 20px;
+    font-weight: 700;
+}
+
+.bold{
+    font-weight: bold;
 }
 
 .dropdownToggleButton{
@@ -109,13 +114,10 @@ h2, h3, h3 {
     cursor: pointer;
     margin-top: 20px;
 }
+
 .dropdownToggleButton:hover{
     background-color: black;
 }
-
-/* .dropdown-menu, .navbar-toggler{
-    border: none;
-} */
 
 .dropdownMenu.hidden{
     display: none;
@@ -125,11 +127,9 @@ ul.dropDownList{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 14px 20px;
 }
-
-
 
 .contactLink{
     color: rgb(176,176,176);
@@ -138,58 +138,116 @@ ul.dropDownList{
 }
 
 .contactLink:hover{
-color: #f2f2f2;
-background-color: rgba(87, 87, 87, .5);
+    color: #f2f2f2;
+    background-color: rgba(87, 87, 87, .5);
 }
 
 .aboutContainer{
-    padding: 10px;
+    padding: 50px 20px; 
+    max-width: 920px;
+    margin: auto;  
+}
+
+.aboutContainer p{
+    text-align: left;
 }
 
 .projectsContainer{
-    background-color: darkgray;
-    padding: 10px;
+    background-color: #0C1A27;
+    padding: 50px 10px; 
 }
 
+.projectsContainer h2{
+    color: #f2f2f2;
+}
+
+.projectTitle{
+    text-decoration: underline;
+    padding-bottom: 0;
+}
 
 .project{
     background-color: white;
     border: 1px solid black;
 }
+
 .projectDescriptionContainer{
-    padding: 10px;
+    padding: 14px 20px;
+    max-width: 920px;
+    margin: auto;
+}
+
+.icons{
+    font-size: 30px;
+    color: rgb(87,87,87);
+    padding: 0;
 }
 
 .projectDescription{
     text-align: left;
+    padding: 0;
+}
+
+.projectLinks{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 14px 20px; 
+}
+
+.projectLink{
+    color: rgb(0,95,161);
+    padding: 14px 20px; 
+}
+
+.projectLink:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .gifContainer{    
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: lightgray;
+    background-color: #f2f2f2; 
 } 
 
 .gif{
+    width: 95%; 
     flex-grow: 1;
     flex-shrink: 1;
     margin: 10px;
-    background-color: gray;
 }
-
 
 footer{
     min-height: 50px;
-    background-color: darkgrey;
     width: 100%;
+    background-color: #f2f2f2; 
+    padding: 14px 20px; 
+}
+
+.footerIconsContainer ul{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
   
+.footerIconsContainer .contactLink {
+    color: rgb(0,95,161);
+}
+
+.footerIconsContainer .contactLink:hover {
+    background-color: rgba(12, 26, 39, .8);
+} 
+
+@media screen and (min-width:550px){
+    .gifContainer{
+        flex-direction: row;
+    }
+    .gif{width: 40%}
+}
+
 @media screen and (min-width:700px){
     .topNav .hamburger{
         display: none;
@@ -199,41 +257,44 @@ footer{
         flex-direction: row;
         justify-content: space-around; 
         align-items: center;
-    }  
-    .gifContainer{
-        flex-direction: row;
     }
-    .heroContainer{
-        padding: 100px 0 15px 0;
-    } 
-    .topNav a:hover{
-        background-color: #0C1A27;
-        color:#f2f2f2;
-        cursor: pointer; 
-    } 
+
+    .brandNameContainer{
+        font-size: 30px;
+    }
+
     main{
-        padding-top: 0;
+        padding: 100px 20px;
     }
+
+    .aboutContainer{
+        padding: 60px 20px;   
+    }
+    .projectsContainer{
+        padding: 60px 20px;   
+    }
+
+    h1{
+       font-size: 32px;
+   }
+
+   h2{
+       font-size: 25px;
+   } 
+
+   h3{
+       font-size: 20px;
+   } 
+
+   p{
+       font-size: 20px;
+       padding: 14px 20px;
+       line-height: 1.5em;
+    }
+    
     .dropdownMenu{
         padding: 14px 20px; 
     }
 
 } 
 
-/* minwidth 700px */
-/*700px .navBarLinks{
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-   align-items: center;  
-} */
-/*  */
-  /* .topNav a {
-    display: inline-block;  */
- /* .topNavList{ */
-    /* display: inline-block;  */
-     /* display: flex;
-     flex-direction: row;
-    justify-content: space-around; 
-    width: 40%;
-  }   */
