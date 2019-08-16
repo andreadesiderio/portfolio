@@ -21,9 +21,13 @@
               <div class="brandNameContainer ">
             <a href="#main" class="active topNavLink brandName">Andrea Desiderio</a> 
             </div> 
-            <a href="javascript:void(0);" class="hamburger">
-              <i class="fa fa-bars"></i>
-            </a>
+            <div class="hamburger">
+              <div class='hamburgerContainer'>
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+              </div>
+            </div>
               <ul class="topNavList">
                   <li><a class="topNavLink" href="#about">About</a></li>
                   <li><a class="topNavLink" href="#projects">Projects</a></li>
@@ -39,9 +43,9 @@
         <button class="dropdownToggleButton dropdownToggle" id="contact">Contact Me</button>
         <div class="dropdownMenu hidden">
             <ul class="dropDownList" >
-                <li><a class="contactLink" href="https://github.com/andreadesiderio"><i class="fab fa-github"></i></a></li>
-                <li><a class="contactLink" href="https://www.linkedin.com/in/andrea-desiderio/"><i class="fab fa-linkedin"></i></a></li>
-                <li><a class="contactLink" href="mailto:andreadesideriopro@gmail.com?subject=Portfolio &body=message%20goes%20here"><i class="fas fa-envelope"></i></a></li>
+                <li><a class="contactLink" href="https://github.com/andreadesiderio"><i class="fab fa-github"></i><br><span class="linkText">Github</span></a></li>
+                <li><a class="contactLink" href="https://www.linkedin.com/in/andrea-desiderio/"><i class="fab fa-linkedin"></i><br><span class="linkText">Linkedin</span></a></li>
+                <li><a class="contactLink" href="mailto:andreadesideriopro@gmail.com?subject=Portfolio &body=message%20goes%20here"><i class="fas fa-envelope"></i><br><span class="linkText">email</span></a></li>
             </ul>
         </div>
         </section>
@@ -83,6 +87,16 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script>
+// function handleHamburgerHover(){
+//   $('.hamburger').hover(toggleHamburgerColor);
+//   // $('.hamburger').on('focus', toggleHamburgerColor);
+// }     
+
+
+// function toggleHamburgerColor(){
+// $('.hamburgerContainer').toggleClass('whiteHamburgerContainer');
+// }
+
 
 function handleResposnsiveNav(){
 $('.hamburger').on('click', toggleResponsiveNav);
@@ -94,7 +108,7 @@ function toggleResponsiveNav(){
     $('nav').removeClass('responsive');
   });
 }
-
+ 
 
 function toggleDropDown(){
  $('.dropdownToggle').on('click', function(e){
@@ -104,7 +118,7 @@ function toggleDropDown(){
 
 handleResposnsiveNav();
 toggleDropDown();
-
+// handleHamburgerHover();
 
     </script>  
 </body>

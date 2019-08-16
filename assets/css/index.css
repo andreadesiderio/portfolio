@@ -21,7 +21,7 @@
     position: fixed;
     width: 100%;
     background-color: #f2f2f2;
-    padding: 14px 20px;
+    padding: 18px 20px;
 }
 
 .topNavList{
@@ -32,7 +32,7 @@ a{
     text-decoration: none;
 }
 
-.topNav a:not(.brandName) {
+.topNav a {
     color: black;
     padding: 14px 16px; 
   }
@@ -41,7 +41,7 @@ a{
     color: rgb(0,95,161);
   }
 
-.topNav a:hover{
+.topNav a:hover, .topNav a:focus{
     background-color: #0C1A27;
     color:#f2f2f2;
     cursor: pointer; 
@@ -60,9 +60,26 @@ a{
 
 .hamburger{
     position: absolute;
-    top:5px;
+    top:0;
     right: 8%;
+    padding: 14px 16px; 
 } 
+
+.hamburgerContainer .bar1, .hamburgerContainer .bar2, .hamburgerContainer .bar3{
+    width: 30px;
+    height: 3px;
+    background-color: #0C1A27;
+    margin: 5px 0;
+}
+
+.hamburger:hover, .hamburger:focus{
+    background-color: #0C1A27;
+    cursor: pointer;
+}
+
+.hamburger:hover .bar, .hamburger:focus .bar{
+    background-color:#f2f2f2;
+}
 
 .topNav.responsive .topNavList{
     flex-direction: column;
@@ -73,10 +90,24 @@ a{
 flex-direction: row;
 }
 
-.topNav.responsive a:not(.hamburger), .topNav.responsive ul.topNavList{
+.topNav.responsive a, .topNav.responsive ul.topNavList{
 display: block;
 text-align: left;
 width: 100%;
+}
+
+.topNav.responsive .hamburger .bar1{
+   -webkit-transform: rotate(-45deg) translate(-7px, 4px);
+   transform: rotate(-45deg) translate(-7px, 4px); 
+} 
+
+.topNav.responsive .hamburger .bar2{
+    opacity: 0;
+}
+
+.topNav.responsive .hamburger .bar3{
+     -webkit-transform: rotate(45deg) translate(-6px, -6px); 
+     transform: rotate(45deg) translate(-6px, -6px); 
 }
 
 main{
@@ -135,6 +166,11 @@ ul.dropDownList{
     color: rgb(176,176,176);
     font-size: 30px;
     padding: 14px 20px;
+    text-align: center;
+}
+
+.linkText{
+    font-size: 16px;
 }
 
 .contactLink:hover{
