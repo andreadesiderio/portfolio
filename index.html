@@ -19,9 +19,9 @@
         <nav class="topNav" id="topNav">
             <div class="navBarLinks">
               <div class="brandNameContainer ">
-            <a href="#main" class="active topNavLink brandName">Andrea Desiderio</a> 
+            <a href="#main" class="topNavLink js-topNavLink brandName">Andrea Desiderio</a> 
             </div> 
-            <div class="hamburger">
+            <div class="hamburger js-hamburger">
               <div class='hamburgerContainer'>
                 <div class="bar bar1"></div>
                 <div class="bar bar2"></div>
@@ -29,9 +29,9 @@
               </div>
             </div>
               <ul class="topNavList">
-                  <li><a class="topNavLink" href="#about">About</a></li>
-                  <li><a class="topNavLink" href="#projects">Projects</a></li>
-                  <li><a class="topNavLink dropdownToggle" href="#contact">Contact</a></li>
+                  <li><a class="topNavLink js-topNavLink" href="#about">About</a></li>
+                  <li><a class="topNavLink js-topNavLink" href="#projects">Projects</a></li>
+                  <li><a class="topNavLink js-topNavLink dropdownToggle js-dropdownToggle" href="#contact">Contact</a></li>
               </ul>
             </div>
           </nav>
@@ -40,22 +40,20 @@
         <section class="heroContainer" id="hero">
         <h1>Hi I'm Andrea</h1>
         <p>I am a full stack web developer</p>
-        <button class="dropdownToggleButton dropdownToggle" id="contact">Contact Me</button>
-        <div class="dropdownMenu hidden">
+        <button class="dropdownToggleButton dropdownToggle js-dropdownToggle" id="contact">Contact Me</button>
+        <div class="dropdownMenu js-dropdownMenu">
             <ul class="dropDownList" >
                 <li><a class="contactLink" href="https://github.com/andreadesiderio"><i class="fab fa-github"></i><br><span class="linkText">Github</span></a></li>
                 <li><a class="contactLink" href="https://www.linkedin.com/in/andrea-desiderio/"><i class="fab fa-linkedin"></i><br><span class="linkText">Linkedin</span></a></li>
-                <li><a class="contactLink" href="mailto:andreadesideriopro@gmail.com?subject=Portfolio &body=message%20goes%20here"><i class="fas fa-envelope"></i><br><span class="linkText">email</span></a></li>
+                <li><a class="contactLink" href="mailto:andreadesideriopro@gmail.com?subject=Portfolio &body=message%20goes%20here"><i class="fas fa-envelope"></i><br><span class="linkText">Email</span></a></li>
             </ul>
         </div>
         </section>
 
         <section class="aboutContainer" id="about">
             <h2>About Me</h2>
-            <p>   I am a <span class="bold">Full Stack Web Developer</span>, currently attending the Web Developer Program at <span class='bold'>Thinkful</span> through <span class='bold'>Bloc</span>. I am a <span class="bold">lifelong learner</span>, <span class="bold">creator</span> and <span class="bold">problem solver</span>. I strive for practicality, efficiency and optimization.
+            <p>   I am a <span class="bold">Full Stack Web Developer</span>, currently attending the Web Developer Program at <span class='bold'>Thinkful</span> through <span class='bold'>Bloc</span>. I am a <span class="bold">lifelong learner</span>, creator and <span class="bold">problem solver</span>. I strive for <span class="bold">practicality</span>, efficiency and <span class="bold">optimization</span>.
               The stack I currently use is <span class='bold'>HTML</span>, <span class='bold'>CSS</span>, <span class="bold">Javascript</span>  and <span class="bold">Jquery</span>.</p>
-              
-              <!-- <p>I've always had a growth mindset and I needed to find a practical way to challenge my mind. Coding and <span class="bold"> Software Development</span> has proven to be the best brain workout. It's a fun process with a satisfying result.</p> -->
         </section>
 
         <section class="projectsContainer" id="projects">
@@ -68,8 +66,8 @@
                     <p class="projectLinks"><a href="https://github.com/andreadesiderio/dentalQuizApp"><span class="projectLink">GITHUB</span></a>|<a href="https://andreadesiderio.github.io/dentalQuizApp/"><span class="projectLink">DEMO</span></a></p>
                   </div>
                   <div class="gifContainer">
-                    <img class="gif" src="assets/img/hero-quiz-min.gif" alt="gif">
-                    <img class="gif" src="assets/img/feedback-quizStart-min.gif" alt="gif">
+                    <img class="gif" alt="dental quiz app from the beginging" src="assets/img/hero-quiz-min.gif" alt="gif">
+                    <img class="gif" alt="dental quiz app to the end" src="assets/img/feedback-quizStart-min.gif" alt="gif">
                 </div>
             </div>
         </section>
@@ -84,42 +82,8 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script>
-// function handleHamburgerHover(){
-//   $('.hamburger').hover(toggleHamburgerColor);
-//   // $('.hamburger').on('focus', toggleHamburgerColor);
-// }     
-
-
-// function toggleHamburgerColor(){
-// $('.hamburgerContainer').toggleClass('whiteHamburgerContainer');
-// }
-
-
-function handleResposnsiveNav(){
-$('.hamburger').on('click', toggleResponsiveNav);
-}
-
-function toggleResponsiveNav(){
-  $('nav').toggleClass('responsive');
-  $('a.topNavLink').on('click', function(){
-    $('nav').removeClass('responsive');
-  });
-}
- 
-
-function toggleDropDown(){
- $('.dropdownToggle').on('click', function(e){
- $('.dropdownMenu').toggleClass('hidden');
-})
-}
-
-handleResposnsiveNav();
-toggleDropDown();
-// handleHamburgerHover();
-
-    </script>  
+    <script src="assets/js/index.js" ></script>
 </body>
 </html>
