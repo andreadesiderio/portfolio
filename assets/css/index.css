@@ -152,15 +152,16 @@ h2, h3, h3 {
 }  
 
 ul.dropDownList{
+    width: 70%;
+    margin: 30px auto 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 30px;
     padding: 14px 20px;
 }
 
 ul.dropDownList li{
-    min-width: 80px;
+    min-width: 70px;
     padding: 20px 20px; 
     border-radius: 10px;
     background-color: #0C1A27;
@@ -266,27 +267,28 @@ img{
 }
 
 footer{
-    height: 90px;
+     height: 80px; 
     width: 100%;
     background-color: #f2f2f2; 
     padding: 14px 20px;
 }
 
 .footerIconsContainer ul{
-    margin-top: 10px;
+    margin:2px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
 
 }
   
-.footerIconsContainer .contactLink {
+.footerLink {
     color: rgb(0,95,161);
-    padding: 14px 20px;
+    padding: 10px 12px;
+    font-size: 20px;
 }
 
-.footerIconsContainer .contactLink:hover {
+.footerLink:hover {
     background-color: rgba(12, 26, 39, .8);
 } 
 
@@ -349,6 +351,13 @@ footer{
     
     .dropdownMenu{
         padding: 14px 20px; 
+    }
+
+    .footerIconsContainer ul{
+        padding-right: 30px;
+    }
+    ul.dropDownList li{
+        width: 100px;
     }
 
 } 
