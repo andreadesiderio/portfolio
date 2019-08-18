@@ -112,7 +112,7 @@ main{
 
 .heroContainer{
     padding: 50px 0 30px 0; 
-    background-color: #0C1A27;
+    background-color: black;
     color:#f2f2f2;
 }
 
@@ -138,11 +138,13 @@ h2, h3, h3 {
     cursor: pointer;
     margin-top: 20px;
     font-size: 30px;
-     padding: 14px 20px; 
+    padding: 14px 20px; 
+    width: 70%;
 }
 
 .dropdownToggleButton:hover{
     background-color: black;
+    color: #f2f2f2;
 }
 
 .dropdownMenu{
@@ -158,14 +160,25 @@ ul.dropDownList{
 }
 
 ul.dropDownList li{
-    min-width: 100px;
-    padding: 14px 20px;
+    min-width: 80px;
+    padding: 20px 20px; 
+    border-radius: 10px;
+    background-color: #0C1A27;
+    box-shadow:    
+    0px 1px 2px rgba(87,87,87), 
+	inset 0px 0px 2px rgba(0,0,0, 0.5);
+    background: #A5A7AD;
+	background: -o-linear-gradient(bottom, #0C1A27 25%, rgb(87,87,87) 81%);
+	background: -moz-linear-gradient(bottom, #0C1A27 25%, rgb(87,87,87) 81%);
+	background: -webkit-linear-gradient(bottom,#0C1A27 25%, rgb(87,87,87) 81%);
+	background: -ms-linear-gradient(bottom, #0C1A27 25%, rgb(87,87,87) 81%); 
+	background: linear-gradient(bottom, #0C1A27 25%, rgb(87,87,87) 81%);
 }
 
- .contactLink{
+
+.contactLink{
     color: rgb(176,176,176);
     font-size: 30px;
-    text-align: center;
 } 
 
 ul.dropDownList li:hover .contactLink{
@@ -173,7 +186,12 @@ ul.dropDownList li:hover .contactLink{
 }
 
 ul.dropDownList li:hover {
-    background-color: rgba(87, 87, 87, 0.5);
+    background: #000000;
+	 background: -o-linear-gradient(bottom, #0000 25%, rgb(87,87,87) 81%);
+	background: -moz-linear-gradient(bottom,#0000 25%, rgb(87,87,87) 81%); 
+	background: -webkit-linear-gradient(bottom, #0000 25%, rgb(87,87,87) 81%);
+	background: -ms-linear-gradient(bottom, #0000 25%, rgb(87,87,87) 81%);
+	background: linear-gradient(bottom,#0000 25%, rgb(87,87,87) 81%); 
 }
 
 .aboutContainer{
@@ -248,21 +266,24 @@ img{
 }
 
 footer{
-    min-height: 50px;
+    height: 90px;
     width: 100%;
     background-color: #f2f2f2; 
-    padding: 14px 20px; 
+    padding: 14px 20px;
 }
 
 .footerIconsContainer ul{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
 }
   
 .footerIconsContainer .contactLink {
     color: rgb(0,95,161);
+    padding: 14px 20px;
 }
 
 .footerIconsContainer .contactLink:hover {
