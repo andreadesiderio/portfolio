@@ -235,17 +235,11 @@ ul.dropDownList li:hover {
 }
 
 .imgContainer{    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     background-color: #f2f2f2; 
 } 
 
-.gif{
+img{
     width: 95%; 
-    flex-grow: 1;
-    flex-shrink: 1;
     margin: 10px;
 }
 
