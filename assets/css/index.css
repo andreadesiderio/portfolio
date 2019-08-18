@@ -20,6 +20,7 @@
 
 a{
     text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .topNav a {
@@ -32,7 +33,7 @@ a{
   }
 
 .topNav a:hover, .topNav a:focus{
-    background-color: #0C1A27;
+     background-color: #0C1A27; 
     color:#f2f2f2;
     cursor: pointer; 
 }
@@ -44,7 +45,6 @@ a.topNavLink.active {
 
 .brandNameContainer{
     display: inline-block;
-    font-family: Monda;
     font-weight: bold;
     font-size: 20px; 
   }
@@ -64,12 +64,15 @@ a.topNavLink.active {
 }
 
 .hamburger:hover, .hamburger:focus{
-    background-color: #0C1A27;
     cursor: pointer;
 }
 
 .hamburger:hover .bar, .hamburger:focus .bar{
-    background-color:#f2f2f2;
+    background-color:rgb(87,87,87);
+}
+
+.topNav.responsive{
+    height: 100%;
 }
 
 .topNav.responsive .topNavList{
@@ -135,6 +138,7 @@ h2, h3, h3 {
     cursor: pointer;
     margin-top: 20px;
     font-size: 30px;
+     padding: 14px 20px; 
 }
 
 .dropdownToggleButton:hover{
