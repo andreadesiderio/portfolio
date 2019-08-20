@@ -162,6 +162,7 @@ ul.dropDownList{
 
 ul.dropDownList li{
     min-width: 70px;
+    margin: 5px;
     padding: 20px 20px; 
     border-radius: 10px;
     background-color: #0C1A27;
